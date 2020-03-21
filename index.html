@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Electon Boilerplate</title>
+    <link rel="stylesheet" href="node_modules/vex-js/dist/css/vex.css" />
+    <link rel="stylesheet" href="node_modules/vex-js/dist/css/vex-theme-os.css" />
+    <style>
+      body {
+        background: #e0e5ff;
+        color: #0dadc2;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      }
+      .font-monospace {
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="font-monospace">⚛&#8201;Electon Boilerplate</h1>
+    <!-- All of the Node.js APIs are available in this renderer process. -->
+    <!--
+    We are using Node.js <script>document.write(process.versions.node)</script>,
+    Chromium <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>.
+    -->
+    
+    <div>Times clicked: <span id="times-clicked-count">0</span></div>
+    <div><button id="increment-clicks-button">Click me</button></div>
+    
+    <hr />
+    
+    <div><button id="prompt-open">Open prompt</button></div>
+    <div>Response: <span id="prompt-response">none yet</span></div>
+    
+    <hr />
+    
+    <div><button id="link-open">Open ElectronJS.org</button></div>
+    
+    <hr />
+    
+    <div><button id="settings-open">Settings</button></div>
+    <div>Response: <span id="settings-value">Loading...</span></div>
+    
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js');
+    </script>
+  </body>
+</html>
